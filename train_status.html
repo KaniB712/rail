@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Train Status</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>Train Status</h1>
+    <table border="1">
+        <tr>
+            <th>Train Name</th>
+            <th>Status</th>
+        </tr>
+        {% for train in trains %}
+        <tr>
+            <td>{{ train[1] }}</td>
+            <td>{{ train[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Back to Home</a>
+</body>
+</html>
